@@ -65,4 +65,14 @@
 .Todo_description {
     margin: 10px
 }
+
+.Todo_wrapper{
+    max-width: 360px;
+    display: inline-block;
+}
+.Todos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 /*# sourceMappingURL=index.b507eb56.css.map */

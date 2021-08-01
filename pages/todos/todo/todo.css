@@ -10,3 +10,8 @@
 .Todo_description {
     margin: 10px
 }
+
+.Todo_wrapper{
+    max-width: 360px;
+    display: inline-block;
+}

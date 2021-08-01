@@ -13,13 +13,9 @@ const App = () => {
             <MainNav />
             <Switch>
 
-                <Route exact path="/">
-                    <Home/>
-                </Route>
+                <Route exact path="/" component={Home} />
         
-                <Route path='/todos'>
-                    <Todos />
-                </Route>
+                <Route path='/todos' component={Todos} />
         
             </Switch>
 

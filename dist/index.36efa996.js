@@ -22921,33 +22921,21 @@ const App = ()=>{
                             /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
                                 exact: true,
                                 path: "/",
+                                component: _home.Home,
                                 __source: {
                                     fileName: "App.jsx",
                                     lineNumber: 16
                                 },
-                                __self: undefined,
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_home.Home, {
-                                    __source: {
-                                        fileName: "App.jsx",
-                                        lineNumber: 17
-                                    },
-                                    __self: undefined
-                                })
+                                __self: undefined
                             }),
                             /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
                                 path: "/todos",
+                                component: _todosDefault.default,
                                 __source: {
                                     fileName: "App.jsx",
-                                    lineNumber: 20
+                                    lineNumber: 18
                                 },
-                                __self: undefined,
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_todosDefault.default, {
-                                    __source: {
-                                        fileName: "App.jsx",
-                                        lineNumber: 21
-                                    },
-                                    __self: undefined
-                                })
+                                __self: undefined
                             })
                         ]
                     })
@@ -22956,7 +22944,7 @@ const App = ()=>{
             /*#__PURE__*/ _jsxRuntime.jsx(_footerDefault.default, {
                 __source: {
                     fileName: "App.jsx",
-                    lineNumber: 27
+                    lineNumber: 23
                 },
                 __self: undefined
             })
@@ -26174,6 +26162,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxRuntime = require("react/jsx-runtime");
 var _todos = require("../../mocks/todos");
 var _appCss = require("../../App.css");
+var _todosCss = require("./todos.css");
 var _todo = require("./todo/todo");
 var _todoDefault = parcelHelpers.interopDefault(_todo);
 const Todos = ()=>{
@@ -26181,18 +26170,26 @@ const Todos = ()=>{
         className: "Page",
         __source: {
             fileName: "pages/todos/todos.jsx",
-            lineNumber: 9
+            lineNumber: 10
         },
         __self: undefined,
-        children: _todos.todos.map((todo)=>{
-            return(/*#__PURE__*/ _jsxRuntime.jsx(_todoDefault.default, {
-                todo: todo,
-                __source: {
-                    fileName: "pages/todos/todos.jsx",
-                    lineNumber: 12
-                },
-                __self: undefined
-            }));
+        children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
+            className: "Todos",
+            __source: {
+                fileName: "pages/todos/todos.jsx",
+                lineNumber: 11
+            },
+            __self: undefined,
+            children: _todos.todos.map((todo)=>{
+                return(/*#__PURE__*/ _jsxRuntime.jsx(_todoDefault.default, {
+                    todo: todo,
+                    __source: {
+                        fileName: "pages/todos/todos.jsx",
+                        lineNumber: 14
+                    },
+                    __self: undefined
+                }));
+            })
         })
     }));
 };
@@ -26206,7 +26203,7 @@ $RefreshReg$(_c, "Todos");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","../../mocks/todos":"1qOIV","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","../../App.css":"jdjTQ","./todo/todo":"j7Jeg"}],"1qOIV":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","../../mocks/todos":"1qOIV","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","../../App.css":"jdjTQ","./todo/todo":"j7Jeg","./todos.css":"780Am"}],"1qOIV":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "todos", ()=>todos
@@ -26243,39 +26240,47 @@ var _card = require("../../../components/ui/card/card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
 var _todoCss = require("./todo.css");
 const Todo = (props)=>{
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_cardDefault.default, {
+    return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        className: "Todo_wrapper",
         __source: {
             fileName: "pages/todos/todo/todo.jsx",
             lineNumber: 6
         },
         __self: undefined,
-        children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-            className: "Todo",
+        children: /*#__PURE__*/ _jsxRuntime.jsx(_cardDefault.default, {
             __source: {
                 fileName: "pages/todos/todo/todo.jsx",
                 lineNumber: 7
             },
             __self: undefined,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsx("h3", {
-                    className: "Todo_title",
-                    __source: {
-                        fileName: "pages/todos/todo/todo.jsx",
-                        lineNumber: 8
-                    },
-                    __self: undefined,
-                    children: props.todo.title
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                    className: "Todo_description",
-                    __source: {
-                        fileName: "pages/todos/todo/todo.jsx",
-                        lineNumber: 9
-                    },
-                    __self: undefined,
-                    children: props.todo.description
-                })
-            ]
+            children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                className: "Todo",
+                __source: {
+                    fileName: "pages/todos/todo/todo.jsx",
+                    lineNumber: 8
+                },
+                __self: undefined,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx("h3", {
+                        className: "Todo_title",
+                        __source: {
+                            fileName: "pages/todos/todo/todo.jsx",
+                            lineNumber: 9
+                        },
+                        __self: undefined,
+                        children: props.todo.title
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                        className: "Todo_description",
+                        __source: {
+                            fileName: "pages/todos/todo/todo.jsx",
+                            lineNumber: 10
+                        },
+                        __self: undefined,
+                        children: props.todo.description
+                    })
+                ]
+            })
         })
     }));
 };
@@ -26321,6 +26326,6 @@ $RefreshReg$(_c, "Card");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","./card.css":"kZr1l"}],"kZr1l":[function() {},{}],"2IQKl":[function() {},{}]},["2rAXy","hor7Q","29JuH"], "29JuH", "parcelRequire6330")
+},{"react/jsx-runtime":"8xIwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","./card.css":"kZr1l"}],"kZr1l":[function() {},{}],"2IQKl":[function() {},{}],"780Am":[function() {},{}]},["2rAXy","hor7Q","29JuH"], "29JuH", "parcelRequire6330")
 
 //# sourceMappingURL=index.36efa996.js.map
