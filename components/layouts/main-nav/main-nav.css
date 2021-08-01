@@ -1,0 +1,35 @@
+.MainNav{
+    width: calc(100% - 20px);
+    height: 80px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: 2px 5px 8px -3px rgba(0,0,0,0.35);
+}
+
+.MainNav_logo{
+    
+}
+
+.MainNav_links{
+    list-style: none;
+    display: flex;
+}
+
+.MainNav_links li {
+    margin: 0 10px;
+}
+
+.MainNav_links li a {
+    text-decoration: none;
+}
+
+.MainNav_links li a:visited {
+    color: black;
+}
+
+.MainNav_links li a:hover {
+    cursor: pointer;
+}

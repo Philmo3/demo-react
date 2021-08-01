@@ -1,0 +1,12 @@
+.Todo {
+    padding: 20px
+}
+
+.Todo_title {
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.Todo_description {
+    margin: 10px
+}
